@@ -42,14 +42,8 @@ class AddressResolverTest {
         // b) 
         // SuT: AddressResolver class
         // Service to Mock - HttpResolver
-        String apiKey = ConfigUtils.getPropertyFromConfig("mapquest_key");
-
-        URIBuilder uriBuilder = new URIBuilder("https://www.mapquestapi.com/geocoding/v1/reverse");
-        uriBuilder.addParameter("key", apiKey);
-        uriBuilder.addParameter("location", (new Formatter()).format(Locale.US, "%.6f,%.6f", 40.633116, -8.658784).toString());
-        String url = uriBuilder.build().toString();
         
-        when(httpClient.doHttpGet(url)).thenReturn(response);
+        when(httpClient.doHttpGet(anyString())).thenReturn(response);
         Optional<Address> result = resolver.findAddressForLocation( 40.633116,-8.658784);
 
         Address expected = new Address( "Avenida João Jacinto de Magalhães", "Aveiro", "", "3810-149", null);
