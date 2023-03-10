@@ -1,9 +1,12 @@
-package tqs.lab3.lab3_2_cars;
+package tqs.lab3.lab3_2_cars.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import tqs.lab3.lab3_2_cars.data.CarRepository;
+import tqs.lab3.lab3_2_cars.entity.Car;
 
 public class CarManagerService {
     
@@ -11,14 +14,14 @@ public class CarManagerService {
     private CarRepository carRepository;
 
     public Car save(Car car) {
-        return null;
+        return carRepository.save(car);
     }
 
     public List<Car> getAllCars() {
-        return null;
+        return carRepository.findAll();
     }
 
     public Optional<Car> getCarDetails(Long id) {
-        return null;
+        return carRepository.findByCarId(id);
     }
 }

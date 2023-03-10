@@ -1,4 +1,4 @@
-package tqs.lab3.lab3_2_cars;
+package tqs.lab3.lab3_2_cars.boundary;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
@@ -6,13 +6,16 @@ import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+
+import tqs.lab3.lab3_2_cars.JsonUtils;
+import tqs.lab3.lab3_2_cars.entity.Car;
+import tqs.lab3.lab3_2_cars.service.CarManagerService;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -25,7 +28,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-@WebMvcTest(CarController.class)
+@WebMvcTest()
 public class CarControllerTest {
 
     @Autowired

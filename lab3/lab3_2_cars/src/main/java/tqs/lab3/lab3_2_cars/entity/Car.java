@@ -1,13 +1,28 @@
-package tqs.lab3.lab3_2_cars;
+package tqs.lab3.lab3_2_cars.entity;
 
+import java.util.Objects;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Car {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long carId;
-    private String maker;
-    private String model;
+    
+    private String maker = "mk";
+    private String model = "xpto";
 
     public Car() {}
 
-    public Car(String maker, String model) {}
+    public Car(String maker, String model) {
+        this.maker = maker;
+        this.model = model;
+    }
 
     public Long getCarId() {
         return carId;
@@ -40,11 +55,16 @@ public class Car {
 
     @Override
     public boolean equals(Object obj) {
-        return true;
+        if (obj == this) return true;
+        if (!(obj instanceof Car)) return false;
+
+        Car car = (Car) obj;
+        
+        return carId == car.carId && Objects.equals(maker, car.maker) && Objects.equals(model, car.model);
     }
 
     @Override
     public int hashCode() {
-        return 1;
+        return Objects.hash(this.carId);
     }
 }
