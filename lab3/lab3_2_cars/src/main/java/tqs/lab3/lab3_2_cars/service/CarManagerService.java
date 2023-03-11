@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import tqs.lab3.lab3_2_cars.data.CarRepository;
 import tqs.lab3.lab3_2_cars.entity.Car;
 
+@Service
 public class CarManagerService {
     
     @Autowired
