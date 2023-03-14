@@ -1,11 +1,11 @@
-package tqs.lab3.lab3_2_cars;
+package tqs.lab3.lab3_2_cars.boundary;
 
 import java.util.List;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+// import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -14,6 +14,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.TestPropertySource;
 
 import tqs.lab3.lab3_2_cars.data.CarRepository;
 import tqs.lab3.lab3_2_cars.entity.Car;
@@ -21,7 +22,11 @@ import tqs.lab3.lab3_2_cars.entity.Car;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-@AutoConfigureTestDatabase
+// Uncomment the line bellow to test lab3_2 d)
+// @AutoConfigureTestDatabase
+
+// Uncomment the line bellow to test lab3_3
+@TestPropertySource(locations = "application-integrationtest.properties")
 public class APITest {
     @LocalServerPort
     int randomServerPort;
