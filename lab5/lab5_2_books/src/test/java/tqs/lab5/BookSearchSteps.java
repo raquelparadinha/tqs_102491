@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 import io.cucumber.java.ParameterType;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,9 +23,15 @@ public class BookSearchSteps {
     public LocalDateTime isodate(String year, String month, String day) {
         return LocalDateTime.of(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day), 0, 0);
     }
-    
-    @Given("(a|another) book with the title {string}, written by {string}, published in {isodate}")
+
+    @Given("a book with the title {string}, written by {string}, published in {isodate}")
     public void addBook(final String title, final String author, final LocalDateTime date) {   
+        Book book = new Book(title, author, date);
+        library.addBook(book);
+    }
+
+    @And("another book with the title {string}, written by {string}, published in {isodate}")
+    public void addBook2(final String title, final String author, final LocalDateTime date) {   
         Book book = new Book(title, author, date);
         library.addBook(book);
     }
@@ -48,7 +55,7 @@ public class BookSearchSteps {
         result = library.findBooksByTitle(title);
     }
  
-    @Then("{int} (book|books) should have been found")
+    @Then("{int} books should have been found")
     public void book_should_have_been_found(Integer units) {
         assertEquals(units, result.size());
     }
