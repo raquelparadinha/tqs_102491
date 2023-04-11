@@ -39,7 +39,6 @@ class C_EmployeeController_WithMockServiceTest {
     @MockBean
     private EmployeeService service;
 
-
     @BeforeEach
     public void setUp() throws Exception {
     }

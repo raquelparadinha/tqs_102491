@@ -1,0 +1,263 @@
+{
+  "id": "aae4fcc6-6e67-4dac-8fd3-04e9ea407dab",
+  "version": "2.0",
+  "name": "tqs-homework",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "dd1cd49b-ae0c-4db3-9e3d-ad489f6a5629",
+    "name": "getByCity",
+    "commands": [{
+      "id": "6054c30c-4945-4c8c-b780-923987166349",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7457257f-7fec-4f02-92b9-0651bd6927dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "828x725",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f428b029-0f42-431a-9064-ccb623d61bce",
+      "comment": "",
+      "command": "click",
+      "target": "id=city",
+      "targets": [
+        ["id=city", "id"],
+        ["css=#city", "css:finder"],
+        ["xpath=//input[@id='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13abfe76-3fbc-47d8-ada6-906cb5b93365",
+      "comment": "",
+      "command": "type",
+      "target": "id=city",
+      "targets": [
+        ["id=city", "id"],
+        ["css=#city", "css:finder"],
+        ["xpath=//input[@id='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "London"
+    }, {
+      "id": "ddb195de-03c0-4f1f-a692-80826399b78b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.h-5:nth-child(1)",
+      "targets": [
+        ["css=.h-5:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6e763279-397e-484f-9265-3c182ead132d",
+    "name": "getByCoords",
+    "commands": [{
+      "id": "6964e01a-96a8-4856-9a7c-717ca495c911",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1c1c17e-cc90-47ff-ab4a-baebc5200e39",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "828x725",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac9556ab-c09f-4366-bd74-dab6cf7eca00",
+      "comment": "",
+      "command": "click",
+      "target": "id=latitude",
+      "targets": [
+        ["id=latitude", "id"],
+        ["css=#latitude", "css:finder"],
+        ["xpath=//input[@id='latitude']", "xpath:attributes"],
+        ["xpath=//dl[2]/div/dd/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcbd5615-1cb1-4fa2-bb40-7d7692395bd1",
+      "comment": "",
+      "command": "type",
+      "target": "id=latitude",
+      "targets": [
+        ["id=latitude", "id"],
+        ["css=#latitude", "css:finder"],
+        ["xpath=//input[@id='latitude']", "xpath:attributes"],
+        ["xpath=//dl[2]/div/dd/label/input", "xpath:position"]
+      ],
+      "value": "41.80631748656699"
+    }, {
+      "id": "ef2947c4-36bf-4e6b-87af-ce2440a80a26",
+      "comment": "",
+      "command": "click",
+      "target": "id=longitude",
+      "targets": [
+        ["id=longitude", "id"],
+        ["css=#longitude", "css:finder"],
+        ["xpath=//input[@id='longitude']", "xpath:attributes"],
+        ["xpath=//div[2]/dd/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5113d25-bc0c-464a-a24d-900a92d3a689",
+      "comment": "",
+      "command": "type",
+      "target": "id=longitude",
+      "targets": [
+        ["id=longitude", "id"],
+        ["css=#longitude", "css:finder"],
+        ["xpath=//input[@id='longitude']", "xpath:attributes"],
+        ["xpath=//div[2]/dd/label/input", "xpath:position"]
+      ],
+      "value": "-6.756790700125621"
+    }, {
+      "id": "a0888d89-4775-46d9-ba68-bdd5dba25664",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Download",
+      "targets": [
+        ["linkText=Download", "linkText"],
+        ["css=.flex:nth-child(1) > .inline-block", "css:finder"],
+        ["xpath=//a[@onclick='getByCoords()']", "xpath:attributes"],
+        ["xpath=//dl[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Download')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "51758cef-246f-43d1-b7c7-ec4674a012d4",
+    "name": "cacheStats",
+    "commands": [{
+      "id": "d8d5cd8f-dc18-4f84-8c6e-0a3714cbc7c3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3786d9c-51fe-4c57-9a3e-b7c4f25bf466",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "828x725",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "daa0bd0e-4538-4e75-9b76-ad8911fe856f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Stats",
+      "targets": [
+        ["linkText=Stats", "linkText"],
+        ["css=.ml-10 > .text-gray-300", "css:finder"],
+        ["xpath=//a[contains(text(),'Stats')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'stats.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Stats')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50a4383b-5879-4ab0-9688-94132f3cea8d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Current Air Quality",
+      "targets": [
+        ["linkText=Current Air Quality", "linkText"],
+        ["css=.text-sm:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Current Air Quality')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Current Air Quality')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27f6ceb7-0222-4c02-a1a0-fd62ed02fc2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.py-12",
+      "targets": [
+        ["css=.py-12", "css:finder"],
+        ["xpath=//section/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f36ff127-04d1-4330-8dd7-84ed0dfaeb4a",
+      "comment": "",
+      "command": "click",
+      "target": "id=city",
+      "targets": [
+        ["id=city", "id"],
+        ["css=#city", "css:finder"],
+        ["xpath=//input[@id='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4070fd5-6ebb-402b-857c-24783adbd35e",
+      "comment": "",
+      "command": "type",
+      "target": "id=city",
+      "targets": [
+        ["id=city", "id"],
+        ["css=#city", "css:finder"],
+        ["xpath=//input[@id='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "London"
+    }, {
+      "id": "e1ebcb3c-b2f9-4765-b19a-19179b85fc52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flex:nth-child(2) > .inline-block",
+      "targets": [
+        ["css=.flex:nth-child(2) > .inline-block", "css:finder"],
+        ["xpath=//a[@onclick='getByCity()']", "xpath:attributes"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c169bbe-b0e7-4da6-9ed5-199473659cf0",
+      "comment": "",
+      "command": "click",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'OR')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37468a97-4539-4066-b3fe-5422ce08aad5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Stats",
+      "targets": [
+        ["linkText=Stats", "linkText"],
+        ["css=.ml-10 > .text-gray-300", "css:finder"],
+        ["xpath=//a[contains(text(),'Stats')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'stats.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Stats')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "dff341c3-9e76-4e54-95f0-79e2726a8d01",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}
