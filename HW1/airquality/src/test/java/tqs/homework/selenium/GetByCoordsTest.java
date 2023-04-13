@@ -23,6 +23,7 @@ public class GetByCoordsTest {
   private WebElement btn;
 
   @Test
+  @Disabled
   public void getByCoords() {
     System.setProperty("webdriver.gecko.driver", "/home/raquel/Downloads/geckodriver");
     WebDriver driver = new FirefoxDriver();

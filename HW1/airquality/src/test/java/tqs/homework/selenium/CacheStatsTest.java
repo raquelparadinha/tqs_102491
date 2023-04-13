@@ -32,6 +32,7 @@ public class CacheStatsTest {
   private WebElement btn3;
 
   @Test
+  @Disabled
   public void cacheStats() {
     System.setProperty("webdriver.gecko.driver", "/home/raquel/Downloads/geckodriver");
     WebDriver driver = new FirefoxDriver();

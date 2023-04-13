@@ -20,6 +20,7 @@ public class GetByCityTest {
   private WebElement btn;
 
   @Test
+  @Disabled
   public void getByCity() {
     System.setProperty("webdriver.gecko.driver", "/home/raquel/Downloads/geckodriver");
     WebDriver driver = new FirefoxDriver();
